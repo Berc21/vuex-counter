@@ -17,12 +17,17 @@ const mutations = {
   },
   decrement(state) {
     state.count--
-  }
+  },
 }
 
 const actions = {
   increment: ({commit}) => commit('increment'),
-  decrement: ({commit}) => commit('decrement')
+  decrement: ({commit}) => commit('decrement'),
+  IncrementifEven({commit, state }) {
+    if( (state.count + 1) % 2 === 0 ) {
+      commit('incerement')
+    }
+  }
 }
 
 

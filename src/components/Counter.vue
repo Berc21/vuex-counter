@@ -10,8 +10,12 @@
 import {mapGetters, mapActions} from 'vuex';
 export default {
   name: 'Counter',
-  computed: mapGetters(['getCount']),
-  methods: mapActions(['increment', 'decrement'])
+  computed: {
+    ...mapGetters(['getCount']), 
+    },
+  methods: {
+    ...mapActions(['increment', 'decrement'])
+  }
   
 }
 </script>
