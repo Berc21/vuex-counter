@@ -23,9 +23,9 @@ const mutations = {
 const actions = {
   increment: ({commit}) => commit('increment'),
   decrement: ({commit}) => commit('decrement'),
-  IncrementifEven({commit, state }) {
+  incrementifEven({commit, state }) {
     if( (state.count + 1) % 2 === 0 ) {
-      commit('incerement')
+      commit('increment')
     }
   }
 }

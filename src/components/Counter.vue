@@ -3,6 +3,7 @@
    Counter {{getCount}}
      <button @click="increment">+</button>
      <button @click="decrement">-</button>
+     <button @click="incrementifEven" >+ If number is even</button>
   </div>
 </template>
 
@@ -14,7 +15,7 @@ export default {
     ...mapGetters(['getCount']), 
     },
   methods: {
-    ...mapActions(['increment', 'decrement'])
+    ...mapActions(['increment', 'decrement', 'incrementifEven'])
   }
   
 }
