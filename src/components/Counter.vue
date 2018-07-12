@@ -1,15 +1,17 @@
 <template>
   <div >
-   Counter: {{getCount}}
-
+   Counter {{getCount}}
+     <button @click="increment">+</button>
+     <button @click="decrement">-</button>
   </div>
 </template>
 
 <script>
-import {mapGetters} from 'vuex';
+import {mapGetters, mapActions} from 'vuex';
 export default {
   name: 'Counter',
-  computed: mapGetters(['getCount'])
+  computed: mapGetters(['getCount']),
+  methods: mapActions(['increment', 'decrement'])
   
 }
 </script>
